@@ -38,7 +38,7 @@ class ServerInfo extends Command {
       fields: [
         {
           name: 'Created:',
-          value: guild.createdAt.toLocaleString(),
+          value: guild.createdAt.toLocaleString('en-US', { timeZone: 'UTC', timeZoneName: 'short' }),
           inline: true,
         },
         {
@@ -83,7 +83,7 @@ class ServerInfo extends Command {
         },
       ],
       footer: {
-        text: `Server ID: ${guild.id}`,
+        text: `Server ID: ${guild.id} | ${new Date().toLocaleString('en-US', { timeZone: 'UTC', timeZoneName: 'short' })}`,
       },
     };
     this.messageManager.embed(message, embed, true, false);
