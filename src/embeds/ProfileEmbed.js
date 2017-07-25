@@ -115,7 +115,8 @@ class ProfileEmbed extends BaseEmbed {
                 : 'Unmarked',
           inline: true,
         });
-      this.footer.text = `Last Updated ${new Date(player.updatedAt).toLocaleString()} | Data provided by Nexus-Stats.com`;
+      this.footer.icon_url = 'https://avatars3.githubusercontent.com/u/27929001?v=4&s=200'
+      this.footer.text = `Last Updated ${new Date(player.updatedAt).toLocaleString('en-US', { timeZone: 'UTC', timeZoneName: 'short' })} | Provided by Nexus-Stats.com`;
     } else {
       this.fields = [{ name: '_ _', value: 'No Such Player' }];
     }
