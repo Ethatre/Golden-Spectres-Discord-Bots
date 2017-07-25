@@ -20,7 +20,7 @@ class SortieEmbed extends BaseEmbed {
         value: v.modifier,
       }));
       this.description = `Currently in-progress sortie: **${sortie.boss}**`;
-      this.footer.text = `${sortie.eta} remaining | ${new Date().toLocaleString()}`;
+      this.footer.text = `${sortie.eta} remaining | ${new Date().toLocaleString('en-US', { timeZone: 'UTC', timeZoneName: 'short' })}`;
     }
 
     this.title = 'Worldstate - Sortie';
