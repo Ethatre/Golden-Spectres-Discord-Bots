@@ -70,7 +70,7 @@ class UserInfo extends Command {
         },
         {
           name: 'Registered for Discord',
-          value: user.createdAt.toLocaleString(),
+          value: user.createdAt.toLocaleString('en-US', { timeZone: 'UTC', timeZoneName: 'short' }),
           inline: true,
         },
         {
@@ -81,7 +81,7 @@ class UserInfo extends Command {
       ],
       footer: {
         icon_url: user.defaultAvatarURL,
-        text: `${new Date().toLocaleString()} | ${user.username} is ${user.bot ? '' : 'not'} a bot`,
+        text: `${user.username} is ${user.bot ? '' : 'not'} a bot | ${new Date().toLocaleString('en-US', { timeZone: 'UTC', timeZoneName: 'short' })}`,
       },
     };
 
@@ -109,7 +109,7 @@ class UserInfo extends Command {
         },
         {
           name: 'Joined the Guild',
-          value: member.joinedAt.toLocaleString(),
+          value: member.joinedAt.toLocaleString('en-US', { timeZone: 'UTC', timeZoneName: 'short' }),
           inline: true,
         },
         {
