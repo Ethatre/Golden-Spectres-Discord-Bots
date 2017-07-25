@@ -10,7 +10,7 @@ class BaseEmbed {
   constructor() {
     this.footer = {
       icon_url: 'https://avatars1.githubusercontent.com/u/24436369',
-      text: new Date().toLocaleString(),
+      text: new Date().toLocaleString('en-US', { timeZone: 'UTC', timeZoneName: 'short' }),
     };
   }
 }
